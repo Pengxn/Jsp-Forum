@@ -4,11 +4,11 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class Comment extends IdEntity {
 
-	private int cId; // ÆÀÂÛid
-	private String cContent;// ÆÀÂÛµÄÄÚÈİ
-	private int byId;// ±»ÆÀÂÛµÄÈËµÄid
+	private int cId; // è¯„è®ºid
+	private String cContent;// è¯„è®ºçš„å†…å®¹
+	private int byId;// è¢«è¯„è®ºçš„äººçš„id
 	
-	//×¢£º¼Ì³ĞµÄ¸¸Àà»¹º¬ÓĞ userId ÕâÀïÖ¸µÄÊÇ ·¢±íÆÀÂÛµÄÈËµÄID
+	//æ³¨ï¼šç»§æ‰¿çš„çˆ¶ç±»è¿˜å«æœ‰ userId è¿™é‡ŒæŒ‡çš„æ˜¯ å‘è¡¨è¯„è®ºçš„äººçš„ID
 	
 	//Getters and Setters
 	public int getcId() {
