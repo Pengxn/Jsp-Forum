@@ -2,7 +2,8 @@
 *.class
 
 # MyEclipse files
-.myeclipse/
+/.myeclipse/
+/WebRoot/WEB-INF/classes/*
 
 # OSX files
 */.DS_Store
