@@ -12,7 +12,7 @@ public class PostQuery implements PostDao {
 	
 	private String sql;
 
-	// 查询发帖信息
+	// 鏌ヨ鍙戝笘淇℃伅
 	@Override
 	public ResultSet query(Connection conn, Post post) throws SQLException {
 		
@@ -25,7 +25,7 @@ public class PostQuery implements PostDao {
 		return rs;
 	}
 
-	// 通过 userId 查询发帖信息
+	// 閫氳繃 userId 鏌ヨ鍙戝笘淇℃伅
 	@Override
 	public ResultSet queryId(Connection conn, Post post) throws SQLException {
 		
@@ -40,7 +40,7 @@ public class PostQuery implements PostDao {
 		return rs;
 	}
 
-	// 插入发帖信息
+	// 鎻掑叆鍙戝笘淇℃伅
 	@Override
 	public void save(Connection conn, Post post) throws SQLException {
 
@@ -57,7 +57,7 @@ public class PostQuery implements PostDao {
 		ps.execute();
 	}
 
-	// 修改发帖信息
+	// 淇敼鍙戝笘淇℃伅
 	@Override
 	public void update(Connection conn, Post post) throws SQLException {
 		
@@ -73,7 +73,7 @@ public class PostQuery implements PostDao {
 		ps.execute();
 	}
 
-	// 删除发帖信息
+	// 鍒犻櫎鍙戝笘淇℃伅
 	@Override
 	public void delete(Connection conn, Post post) throws SQLException {
 

@@ -2,8 +2,7 @@ package cn.huiyifyj.bean;
 
 public abstract class IdEntity {
 
-	protected int userId; //ÓÃ»§ID
-
+	protected int userId; // ç”¨æˆ·ID
 	public int getUserId() {
 		return userId;
 	}

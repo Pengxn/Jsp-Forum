@@ -12,15 +12,15 @@ public class UserQuery implements UserDao {
 	
 	private String sql;
 
-	// µÇÂ½ÑéÖ¤
+	// ç™»é™†éªŒè¯
 	@Override
 	public ResultSet login(Connection conn, User user) throws SQLException {
 		
 		sql = "select * from user where name = ?";
 		
 		PreparedStatement ps = conn.prepareCall(sql);
-		// Ò²¿ÉÒÔĞ´³É PreparedStatement ps = conn.prepareStatement(sql);
-		// Ö®ºóµÄ·½·¨¶¼¿ÉÒÔÕâÑùĞ´
+		// ä¹Ÿå¯ä»¥å†™æˆ PreparedStatement ps = conn.prepareStatement(sql);
+		// ä¹‹åçš„æ–¹æ³•éƒ½å¯ä»¥è¿™æ ·å†™
 		
 		ps.setString(1, user.getName());
 		
@@ -29,7 +29,7 @@ public class UserQuery implements UserDao {
 		return rs;
 	}
 
-	// ²éÑ¯ÓÃ»§ĞÅÏ¢
+	// æŸ¥è¯¢ç”¨æˆ·ä¿¡æ¯
 	@Override
 	public ResultSet query(Connection conn, User user) throws SQLException {
 
@@ -44,7 +44,7 @@ public class UserQuery implements UserDao {
 		return rs;
 	}
 
-	// ±£´æ(²åÈë)ÓÃ»§ĞÅÏ¢
+	// ä¿å­˜(æ’å…¥)ç”¨æˆ·ä¿¡æ¯
 	@Override
 	public void save(Connection conn, User user) throws SQLException {
 
@@ -61,7 +61,7 @@ public class UserQuery implements UserDao {
 		ps.execute();
 	}
 
-	// ¸ù¾İÓÃ»§Ö¸¶¨µÄid¸üĞÂÓÃ»§ĞÅÏ¢
+	// æ ¹æ®ç”¨æˆ·æŒ‡å®šçš„idæ›´æ–°ç”¨æˆ·ä¿¡æ¯
 	@Override
 	public void update(Connection conn, User user) throws SQLException {
 		
@@ -79,7 +79,7 @@ public class UserQuery implements UserDao {
 		ps.execute();
 	}
 
-	// É¾³ıÖ¸¶¨ÓÃ»§ĞÅÏ¢
+	// åˆ é™¤æŒ‡å®šç”¨æˆ·ä¿¡æ¯
 	@Override
 	public void delete(Connection conn, User user) throws SQLException {
 		

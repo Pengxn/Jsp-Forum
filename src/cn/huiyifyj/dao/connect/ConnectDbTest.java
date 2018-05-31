@@ -7,7 +7,7 @@ import cn.huiyifyj.util.ConnectDb;
 
 public class ConnectDbTest {
 
-	//²âÊÔÊı¾İ¿âÁ¬½Ó
+	//æµ‹è¯•æ•°æ®åº“è¿æ¥
 	public static void main(String[] args) throws SQLException {
 		
 		ConnectDb conndb = ConnectDb.getInstance();

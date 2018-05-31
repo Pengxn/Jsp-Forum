@@ -18,9 +18,7 @@ public class ViaConnect{
 	
 
 	/**
-	 * ²åÈëÍ·Ïñ±íĞÅÏ¢
-	 * 
-	 * @throws FileNotFoundException
+	 * æ’å…¥å¤´åƒè¡¨ä¿¡æ¯
 	 */
 	public static void save(int userId, String viaName){
 
@@ -59,9 +57,7 @@ public class ViaConnect{
 	}
 
 	/**
-	 * ²éÑ¯Í·Ïñ±íĞÅÏ¢
-	 * 
-	 * @throws Exception
+	 * æŸ¥è¯¢å¤´åƒè¡¨ä¿¡æ¯
 	 */
 	public static Map<Object, Object> query(int userId) {
 
@@ -106,9 +102,7 @@ public class ViaConnect{
 	}
 	
 	/**
-	 * ĞŞ¸ÄÍ·Ïñ±íĞÅÏ¢
-	 * 
-	 * @throws FileNotFoundException
+	 * ä¿®æ”¹å¤´åƒè¡¨ä¿¡æ¯
 	 */
 	public static void update(int userId, String viaName){
 

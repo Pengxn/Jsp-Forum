@@ -8,19 +8,19 @@ import cn.huiyifyj.bean.User;
 
 public interface UserDao {
 	
-	// 登录验证
+	// 鐧诲綍楠岃瘉
 	public ResultSet login(Connection conn, User user) throws SQLException;
 	
-	// 查询用户信息
+	// 鏌ヨ鐢ㄦ埛淇℃伅
 	public ResultSet query(Connection conn, User user) throws SQLException;
 	
-	// 保存(插入)用户信息
+	// 淇濆瓨(鎻掑叆)鐢ㄦ埛淇℃伅
 	public void save(Connection conn, User user) throws SQLException;
 	
-	// 修改用户信息
+	// 淇敼鐢ㄦ埛淇℃伅
 	public void update(Connection conn, User user) throws SQLException;
 	
-	// 删除用户信息
+	// 鍒犻櫎鐢ㄦ埛淇℃伅
 	public void delete(Connection conn, User user) throws SQLException;
 
 }

@@ -12,7 +12,7 @@ public class ViaQuery implements ViaDao {
 	
 	private String sql;
 
-	// 查询头像信息
+	// 鏌ヨ澶村儚淇℃伅
 	@Override
 	public ResultSet query(Connection conn, Via via) throws SQLException {
 		
@@ -27,7 +27,7 @@ public class ViaQuery implements ViaDao {
 		return rs;
 	}
 
-	// 保存(插入)头像信息
+	// 淇濆瓨(鎻掑叆)澶村儚淇℃伅
 	@Override
 	public void save(Connection conn, Via via) throws SQLException {
 		
@@ -41,7 +41,7 @@ public class ViaQuery implements ViaDao {
 		ps.execute();
 	}
 
-	// 修改头像信息
+	// 淇敼澶村儚淇℃伅
 	@Override
 	public void update(Connection conn, Via via) throws SQLException {
 		
@@ -55,7 +55,7 @@ public class ViaQuery implements ViaDao {
 		ps.execute();
 	}
 
-	// 删除头像信息
+	// 鍒犻櫎澶村儚淇℃伅
 	@Override
 	public void delete(Connection conn, Via via) throws SQLException {
 		// TODO Auto-generated method stub

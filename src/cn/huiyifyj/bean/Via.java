@@ -4,7 +4,7 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class Via extends IdEntity {
 	
-	String photo; // 用户头像
+	String photo; // 鐢ㄦ埛澶村儚
 	
 	public String getPhoto() {
 		return photo;

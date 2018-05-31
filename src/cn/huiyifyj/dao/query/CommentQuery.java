@@ -12,7 +12,7 @@ public class CommentQuery implements CommentDao {
 	
 	private String sql;
 
-	// °´±»ÆÀÂÛ±íµÄ byId ²éÑ¯ÆÀÂÛ±íĞÅÏ¢
+	// æŒ‰è¢«è¯„è®ºè¡¨çš„ byId æŸ¥è¯¢è¯„è®ºè¡¨ä¿¡æ¯
 	@Override
 	public ResultSet query(Connection conn, Comment comment) throws SQLException {
 
@@ -27,7 +27,7 @@ public class CommentQuery implements CommentDao {
 		return rs;
 	}
 
-	// ±£´æ(²åÈë)ÆÀÂÛĞÅÏ¢
+	// ä¿å­˜(æ’å…¥)è¯„è®ºä¿¡æ¯
 	@Override
 	public void save(Connection conn, Comment comment) throws SQLException {
 		
@@ -42,7 +42,7 @@ public class CommentQuery implements CommentDao {
 		ps.execute();
 	}
 
-	// ĞŞ¸ÄÆÀÂÛĞÅÏ¢
+	// ä¿®æ”¹è¯„è®ºä¿¡æ¯
 	@Override
 	public void update(Connection conn, Comment comment) throws SQLException {
 		
@@ -56,7 +56,7 @@ public class CommentQuery implements CommentDao {
 		ps.execute();
 	}
 
-	// Í¨¹ı byId É¾³ıÆÀÂÛĞÅÏ¢
+	// é€šè¿‡ byId åˆ é™¤è¯„è®ºä¿¡æ¯
 	@Override
 	public void delete(Connection conn, Comment comment) throws SQLException {
 
@@ -69,7 +69,7 @@ public class CommentQuery implements CommentDao {
 		ps.execute();
 	}
 
-	// Í¨¹ı cId É¾³ıÆÀÂÛĞÅÏ¢
+	// é€šè¿‡ cId åˆ é™¤è¯„è®ºä¿¡æ¯
 	@Override
 	public void deleteCId(Connection conn, Comment comment) throws SQLException {
 		

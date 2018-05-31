@@ -4,11 +4,11 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class User extends IdEntity {
 	
-	private String name; //ÓÃ»§ĞÕÃû
-	private String password; //ÓÃ»§ÃÜÂë
-	private String email; //ÓÃ»§ÓÊÏä
-	private String address; //ÓÃ»§×¡Ö·
-	private String intro; //¸öÈË¼ò½é
+	private String name; //ç”¨æˆ·å§“å
+	private String password; //ç”¨æˆ·å¯†ç 
+	private String email; //ç”¨æˆ·é‚®ç®±
+	private String address; //ç”¨æˆ·ä½å€
+	private String intro; //ä¸ªäººç®€ä»‹
 	
 	//Getter and Setter
 	public String getName() {

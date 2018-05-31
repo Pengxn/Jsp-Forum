@@ -4,11 +4,11 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class Post extends IdEntity {
 	
-	private int pId; //·¢Ìûid
-	private String titles; //Ìû×ÓÄÚÈİ
-	private String pContent; //·¢ÌûÄÚÈİ
-	private String photo; //·¢ÌûµÄÍ¼Æ¬
-	private String userName; //·¢ÌûÈËĞÕÃû
+	private int pId; //å‘å¸–id
+	private String titles; //å¸–å­å†…å®¹
+	private String pContent; //å‘å¸–å†…å®¹
+	private String photo; //å‘å¸–çš„å›¾ç‰‡
+	private String userName; //å‘å¸–äººå§“å
 	
 	// Getters and Setters
 	public int getpId() {

@@ -8,19 +8,19 @@ import cn.huiyifyj.bean.Post;
 
 public interface PostDao {
 
-	// 查询用户信息
+	// 鏌ヨ鐢ㄦ埛淇℃伅
 	public ResultSet query(Connection conn, Post post) throws SQLException;
 	
-	// 通过 userid 查询用户信息
+	// 閫氳繃 userid 鏌ヨ鐢ㄦ埛淇℃伅
 	public ResultSet queryId(Connection conn, Post post) throws SQLException;
 	
-	// 插入用户信息
+	// 鎻掑叆鐢ㄦ埛淇℃伅
 	public void save(Connection conn, Post post) throws SQLException;
 	
-	// 修改用户信息
+	// 淇敼鐢ㄦ埛淇℃伅
 	public void update(Connection conn, Post post) throws SQLException;
 	
-	// 删除用户信息
+	// 鍒犻櫎鐢ㄦ埛淇℃伅
 	public void delete(Connection conn, Post post) throws SQLException;
 	
 }

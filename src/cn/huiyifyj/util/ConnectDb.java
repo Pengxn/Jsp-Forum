@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConnectDb {
 	
-	//Êı¾İ¿âÅäÖÃ±äÁ¿
+	//æ•°æ®åº“é…ç½®å˜é‡
 	private static String driver;
 	private static String dburl;
 	private static String user;
@@ -17,22 +17,22 @@ public class ConnectDb {
 	
 	private static final ConnectDb dbFactory = new ConnectDb();
 	
-	//¶ÁÈ¡dbconfig.propertiesÅäÖÃÎÄ¼şÖĞµÄÖµ²¢¸³ÖµÏàÓ¦µÄ±äÁ¿
+	//è¯»å–dbconfig.propertiesé…ç½®æ–‡ä»¶ä¸­çš„å€¼å¹¶èµ‹å€¼ç›¸åº”çš„å˜é‡
 	static {
 		
 		Properties dbconfig = new Properties();
 		
 		try {
 			
-			//¶ÁÈ¡ÅäÖÃÎÄ¼ş
+			//è¯»å–é…ç½®æ–‡ä»¶
 			InputStream in = ConnectDb.class.getClassLoader().getResourceAsStream("dbconfig.properties");
 			dbconfig.load(in);
 			
 		} catch (Exception e) {
-			System.out.println("Êı¾İ¿âµÄÅäÖÃÎÄ¼ş(dbconfig.properties)¶ÁÈ¡´íÎó...");
+			System.out.println("æ•°æ®åº“çš„é…ç½®æ–‡ä»¶(dbconfig.properties)è¯»å–é”™è¯¯...");
 		}
 		
-		//¸³Öµ¸øÏàÓ¦µÄ±äÁ¿
+		//èµ‹å€¼ç»™ç›¸åº”çš„å˜é‡
 		driver = dbconfig.getProperty("driver");
 		dburl = dbconfig.getProperty("dburl");
 		user = dbconfig.getProperty("user");
@@ -40,7 +40,7 @@ public class ConnectDb {
 		
 	}
 	
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	private ConnectDb() { }
 	
 	public static ConnectDb getInstance() {
@@ -49,10 +49,10 @@ public class ConnectDb {
 	
 	public Connection makeConnection() {
 		
-		//Á¬½ÓÊı¾İ¿â
+		//è¿æ¥æ•°æ®åº“
 		try {
 			
-			//Á¬½ÓÇı¶¯
+			//è¿æ¥é©±åŠ¨
 			Class.forName(driver);
 			
 			conn = DriverManager.getConnection(dburl, user, password);
@@ -61,7 +61,7 @@ public class ConnectDb {
 			
 			e.printStackTrace();
 			
-			System.out.println("Êı¾İ¿âÁ¬½ÓÇı¶¯³öÏÖÁËÎÊÌâ...");
+			System.out.println("æ•°æ®åº“è¿æ¥é©±åŠ¨å‡ºç°äº†é—®é¢˜...");
 			
 		}
 		

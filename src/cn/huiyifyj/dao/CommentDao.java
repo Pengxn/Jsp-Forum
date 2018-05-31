@@ -8,19 +8,19 @@ import cn.huiyifyj.bean.Comment;
 
 public interface CommentDao {
 	
-	// 查询用户信息
+	// 鏌ヨ鐢ㄦ埛淇℃伅
 	public ResultSet query(Connection conn, Comment comment) throws SQLException;
 	
-	// 插入用户信息
+	// 鎻掑叆鐢ㄦ埛淇℃伅
 	public void save(Connection conn, Comment comment) throws SQLException;
 	
-	// 修改用户信息
+	// 淇敼鐢ㄦ埛淇℃伅
 	public void update(Connection conn, Comment comment) throws SQLException;
 	
-	// 通过 byid 删除用户信息
+	// 閫氳繃 byid 鍒犻櫎鐢ㄦ埛淇℃伅
 	public void delete(Connection conn, Comment comment) throws SQLException;
 	
-	//通过 cId 删除用户信息
+	//閫氳繃 cId 鍒犻櫎鐢ㄦ埛淇℃伅
 	public void deleteCId(Connection conn, Comment comment) throws SQLException;
 
 }
