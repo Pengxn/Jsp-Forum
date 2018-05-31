@@ -8,11 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.huiyifyj.dao.PostDao;
 import cn.huiyifyj.dao.CommentDao;
-import cn.huiyifyj.dao.query.PostQuery;
 import cn.huiyifyj.dao.query.CommentQuery;
-import cn.huiyifyj.bean.Post;
 import cn.huiyifyj.bean.Comment;
 import cn.huiyifyj.util.ConnectDb;
 
