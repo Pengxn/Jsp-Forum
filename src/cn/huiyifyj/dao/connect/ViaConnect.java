@@ -1,6 +1,5 @@
 package cn.huiyifyj.dao.connect;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +14,6 @@ import cn.huiyifyj.dao.query.ViaQuery;
 public class ViaConnect{
 
 	static Connection conn = null;
-	
 
 	/**
 	 * 插入头像表信息
