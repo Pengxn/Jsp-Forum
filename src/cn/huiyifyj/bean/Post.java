@@ -4,11 +4,11 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class Post extends IdEntity {
 	
-	private int pId; //发帖id
-	private String titles; //帖子内容
-	private String pContent; //发帖内容
-	private String photo; //发帖的图片
-	private String userName; //发帖人姓名
+	private int pId; // 发帖id
+	private String titles; // 帖子内容
+	private String pContent; // 发帖内容
+	private String photo; // 发帖的图片
+	private String userName; // 发帖人姓名
 	
 	// Getters and Setters
 	public int getpId() {

@@ -5,8 +5,8 @@ import cn.huiyifyj.bean.IdEntity;
 public class Comment extends IdEntity {
 
 	private int cId; // 评论id
-	private String cContent;// 评论的内容
-	private int byId;// 被评论的人的id
+	private String cContent; // 评论的内容
+	private int byId; // 被评论的人的id
 	
 	//注：继承的父类还含有 userId 这里指的是 发表评论的人的ID
 	
