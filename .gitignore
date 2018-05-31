@@ -1,0 +1,9 @@
+# Java class files
+*.class
+
+# MyEclipse files
+.myeclipse/
+
+# OSX files
+*/.DS_Store
+.DS_Store
