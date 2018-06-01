@@ -44,6 +44,7 @@ public class LoginServlet extends HttpServlet {
 		map_r.put("name", name);
 		map_r.put("password", pass);
 		
+		// 2、在RequestScope2中，这样取得参数值
 		Map<Object, Object> map2 = new HashMap<Object, Object>();
 		
 		if (null == name) {
@@ -74,16 +75,45 @@ public class LoginServlet extends HttpServlet {
 		/**
 		 * 判断是登录还是注册,true是登录
 		 */
+		if(qr_pass == null){
+			
+			if(name.equals(map.get("name")) && pass.equals(map.get("password")) && code.equals(session.getAttribute("certCode"))) {
+				
+				System.out.println("注册到登陆");
+				
+				User user = new User();
+				
+				user.setName(name);
+				user.setPassword(pass);
+				user.setUserId((Integer) map.get("userid"));
+				
+				session.setAttribute("user", user);
+				
+				resp.sendRedirect("index.jsp");
+				
+			} else {
+				resp.sendRedirect("index.jsp");
+			}
+			
+		} else if (pass.equals(qr_pass) && code.equals(session.getAttribute("certCode"))) {
+			
+			UserConnect.insert(map_r);
+			
+			// 1、在RequestScope中修改URL
+			resp.sendRedirect("LoginServlet?name2=" + URLEncoder.encode(name, "UTF-8") + "&pass=" + pass + "&code=" + code);
+			
+		} else {
+			resp.sendRedirect("index.jsp");
+		}
 		
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
+		
+		doGet(req, resp);
+		
 	}
 	
-	
-
 }
