@@ -144,7 +144,7 @@ public class CommentConnect {
 	/**
 	 * 通过 cId 删除评论信息
 	 */
-	public static void deletePid(int cId) {
+	public static void deletecId(int cId) {
 		
 		try {
 			
