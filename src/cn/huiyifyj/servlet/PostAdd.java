@@ -66,7 +66,7 @@ public class PostAdd extends HttpServlet {
 		
 		System.out.println(realPath + contextPath);
 		
-		String uploadPath = (realPath + contextPath) + "/WebContent/uploda_Post";
+		String uploadPath = (realPath + contextPath) + "/WebRoot/uploda_Post";
 		
 		boolean isMultipart = ServletFileUpload.isMultipartContent(req);
 		
@@ -130,7 +130,7 @@ public class PostAdd extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		// 讲发帖的图片信息插入数据库
+		// 将发帖的图片信息插入数据库
 		post.setTitles(titles);
 		post.setpContent(pContent);
 		post.setUserId(userId);

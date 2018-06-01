@@ -63,7 +63,7 @@ public class PostUpdate extends HttpServlet {
 
 		System.out.println(pa + th);
 		
-		String uploadPath = (pa + th) + "/WebContent/uploda_Post";
+		String uploadPath = (pa + th) + "/WebRoot/uploda_Post";
 		
 		boolean isMultipart = ServletFileUpload.isMultipartContent(req);
 		
