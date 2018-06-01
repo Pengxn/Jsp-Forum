@@ -20,7 +20,7 @@ public class PostConnect {
 	/**
 	 * 获得发帖表信息
 	 */
-	public static List<Object> FatieQuery() {
+	public static List<Object> PostQuery() {
 
 		List<Object> list = new ArrayList<Object>();
 		
