@@ -9,13 +9,7 @@ import java.io.OutputStream;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import com.sun.org.apache.regexp.internal.recompile;
 
 @WebServlet("/MakeCertPic")
 public class MakeCertPic {
