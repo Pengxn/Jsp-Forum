@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <section class="content">
+
 	<div class="container">
 		<div class="row">
 		
 			<!-- post nav -->
 			<div class="col-lg-8 col-md-8">
+			
+			<%
+				for (int i = 0; i < 7; i ++) { // 对 post nav 循环7次
+			%>
 			
 				<!-- POST -->
 				<div class="post">
@@ -47,8 +52,69 @@
 					</div>
 					<div class="clearfix"></div>
 				</div><!-- POST END -->
+				
+				<%
+					}
+			 	%>
 			
 			</div><!-- Post Nav END -->
+			
+			<!-- Right Side Nav -->
+			<div class="col-lg-4 col-md-4">
+			
+				<!-- category nav -->
+				<div class="sidebarblock">
+					<h3>Categories</h3>
+					<div class="divline"></div>
+					<div class="blocktxt">
+						<ul class="cats">
+							<li>
+								<a href="#">
+									Share Interesting Stories
+									<span class="badge pull-right">20</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Movies &amp; Music &amp; Books
+									<span class="badge pull-right">10</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Ask confusing questions
+									<span class="badge pull-right">50</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Looking for Players
+									<span class="badge pull-right">36</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Trading for Money
+									<span class="badge pull-right">41</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Video &amp; Audio Drivers
+									<span class="badge pull-right">11</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!-- category nav END -->
+				
+				<!-- Poll of Week Nav -->
+				<jsp:include page="poll.jsp"></jsp:include>
+				
+				<!-- Active Threads Nav -->
+				<jsp:include page="active.jsp"></jsp:include>
+			
+			</div><!-- Right Side Nav END -->
 		
 		</div>
 	</div>
@@ -88,7 +154,6 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
-	</div>
-	<!-- Page Number END -->
+	</div><!-- Page Number END -->
                 
 </section>
