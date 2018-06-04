@@ -4,7 +4,7 @@ import cn.huiyifyj.bean.IdEntity;
 
 public class Via extends IdEntity {
 	
-	String avatar; // 用户头像
+	private String avatar; // 用户头像
 	// 同时也继承了父类的 userId
 
 	public String getAvatar() {
