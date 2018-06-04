@@ -4,7 +4,7 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!-- Slider -->
+<!-- Slider Banner Nav -->
 <div class="tp-banner-container">
 	<div class="tp-banner" >
 		<ul>
@@ -17,32 +17,34 @@
 		</ul>
 	</div>
 </div>
-<!-- //Slider -->
+<!-- Slider Banner Nav END -->
 
 <!-- header nav -->
 <div class="headernav">
 	<div class="container">
 		<div class="row">
 		
-			<!-- 左侧  -->
+			<!-- Left Side Nav -->
 			<div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo ">
-				<a href="index.jsp"><img src="images/logo.jpg" alt="logo" ></a>
+				<a href="index.jsp">
+					<img src="images/logo.jpg" alt="logo" />	<!-- Logo Nav -->
+				</a>
 			</div>
 			<div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
 				<div class="dropdown">
 					<a data-toggle="dropdown" href="#" >
-						Borderlands 2 <b class="caret"></b>
+						Topic One <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu" role="menu">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Borderlands 1</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-2" href="#">Borderlands 2</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-3" href="#">Borderlands 3</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Topic One</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-2" href="#">Topic Two</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-3" href="#">Topic Three</a></li>
 					</ul>
 				</div>
 			</div>
-			<!-- 左侧  -->
+			<!-- Left Side Nav -->
 			
-			<!-- search nav -->
+			<!-- Search Nav -->
 			<div class="col-lg-4 search hidden-xs hidden-sm col-md-3">
 				<div class="wrap">
 					<form action="#" method="post" class="form">
@@ -55,10 +57,9 @@
 						<div class="clearfix"></div>
 					</form>
 				</div>
-			</div>
-			<!-- search nav END -->
+			</div><!-- Search Nav END -->
 			
-			<!-- 右侧 -->
+			<!-- Right Side Nav -->
 			<div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
 				<div class="stnt pull-left">
 					<form action="post.jsp" method="post" class="form">
@@ -67,36 +68,44 @@
 				</div>
 				
 				<!-- 判断用户是否登陆 -->
-				<c:if test="${empty user}"><!-- 未登录 -->
+				<c:if test="${empty user}">		<!-- 未登录 -->
+				
 				<div class="env pull-left">
 					<a href="index.jsp#">Login</a>
 				</div>
-				</c:if>
 				
-				<c:if test="${!empty user}"><!-- 已登陆 -->		
+				</c:if>
+				<c:if test="${!empty user}">	<!-- 已登陆 -->
+				
 				<div class="env pull-left">
 					<i class="fa fa-envelope"></i>
 				</div>
 				<!-- avatar nav -->
 				<div class="avatar pull-left dropdown">
 					<a data-toggle="dropdown" href="#">
-						<img src="images/avatar.jpg" alt="avatar" >
+
+						<img src="images/avatar.jpg" alt="" >
+
 						<b class="caret"></b>
 					</a>
 					<div class="status green">&nbsp;</div>
 					<ul class="dropdown-menu" role="menu">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-2" href="#">Inbox</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-3" href="#">Log Out</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-4" href="04_new_account.html">Create account</a></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">My Profile</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-2" href="#">Unread</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-3" href="Exit">Log Out</a>	<!-- 调用 servlet.Exit -->
+						</li>
 					</ul>
-				</div>
-				<!-- avatar nav END -->
+				</div><!-- avatar nav END -->
+				
 				</c:if>
 				
 				<div class="clearfix"></div>
-			</div>
-			<!-- 右侧 -->
+			</div><!-- Right Side Nav -->
 				
 		</div>
 	</div>

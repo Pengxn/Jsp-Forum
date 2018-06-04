@@ -65,7 +65,7 @@
 
 						<!-- Login Nav -->
 						<div class="post">
-							<form action="#" class="form newtopic" method="post">
+							<form action="Login" class="form newtopic" method="post">
 								<div class="postinfotop">
 									<h2>Login</h2>
 								</div>
@@ -75,18 +75,18 @@
 									<div class="topwrap">
 										<div class="userinfo pull-left">
 											<div class="avatar">
-												<img src="images/logo.jpg" alt="" />
+												<img src="images/logo.jpg" alt="Logo" />
 											</div>
 										</div>
 										<div class="posttext pull-left">
 											<div class="row">
 												<div class="col-lg-6 col-md-6">
-													<input type="text" placeholder="User Name" class="form-control" />
+													<input type="text" name="name" placeholder="User Name" class="form-control" />
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-lg-6 col-md-6">
-													<input type="text" placeholder="Password" class="form-control" />
+													<input type="text" name="password" placeholder="Password" class="form-control" />
 												</div>
 											</div>
 										</div>
