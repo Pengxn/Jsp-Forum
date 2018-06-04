@@ -18,9 +18,8 @@ public class UserQuery implements UserDao {
 		
 		sql = "select * from user where name = ?";
 		
+		// 也可以写成 PreparedStatement ps = conn.prepareStatement(sql)，之后的方法都可以这样写
 		PreparedStatement ps = conn.prepareCall(sql);
-		// 也可以写成 PreparedStatement ps = conn.prepareStatement(sql);
-		// 之后的方法都可以这样写
 		
 		ps.setString(1, user.getName());
 		
