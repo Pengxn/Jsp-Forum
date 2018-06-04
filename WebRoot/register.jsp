@@ -12,6 +12,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Forum :: New account</title>
+	
+	<!-- logo -->
+	<link rel="shortcut icon" href="favicon.png">
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
