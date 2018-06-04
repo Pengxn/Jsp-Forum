@@ -26,7 +26,7 @@
 		
 			<!-- 左侧  -->
 			<div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo ">
-				<a href="index.html"><img src="images/logo.jpg" alt="logo" ></a>
+				<a href="index.jsp"><img src="images/logo.jpg" alt="logo" ></a>
 			</div>
 			<div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
 				<div class="dropdown">
@@ -61,8 +61,8 @@
 			<!-- 右侧 -->
 			<div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
 				<div class="stnt pull-left">
-					<form action="03_new_topic.html" method="post" class="form">
-						<button class="btn btn-primary">Start New Topic</button>
+					<form action="post.jsp" method="post" class="form">
+						<button class="btn btn-primary">New a Topic</button>
 					</form>
 				</div>
 				
