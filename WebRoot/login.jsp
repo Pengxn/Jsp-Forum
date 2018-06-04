@@ -86,13 +86,22 @@
 											</div>
 											<div class="row">
 												<div class="col-lg-6 col-md-6">
-													<input type="text" placeholder="User Name" class="form-control" />
+													<input type="text" placeholder="Password" class="form-control" />
 												</div>
 											</div>
 										</div>
 										<div class="clearfix"></div>
-									</div>  
+									</div>
 								</div><!-- acc section END -->
+								
+								<div class="accsection networks">
+								<div class="acccap">
+									<div class="userinfo pull-left">&nbsp;</div>
+									<div class="posttext pull-left">
+										<h3>New a Account</h3>
+									</div>
+								</div>
+								</div>
 	
 								<div class="postinfobot">
 									<div class="pull-left lblfch">
