@@ -79,6 +79,7 @@ public class UserConnect {
 
 			UserDao userDao = new UserQuery();
 			User user = new User();
+			
 			user.setName((String) map.get("name"));
 			user.setPassword((String) map.get("password"));
 

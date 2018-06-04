@@ -17,9 +17,7 @@ public class PostConnect {
 	
 	static Connection conn = null;
 	
-	/**
-	 * 获得发帖表信息
-	 */
+	// 获得发帖表信息
 	public static List<Object> PostQuery() {
 
 		List<Object> list = new ArrayList<Object>();
@@ -36,17 +34,15 @@ public class PostConnect {
 
 			for (int i = 0; rs.next(); i++) {
 				
-				/**
-				 * 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
-				 */
+				// 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
 				Map<Object, Object> map = new HashMap<Object, Object>();
-				map.put("fid", rs.getInt(1));
-				map.put("titles", rs.getString(2));
-				map.put("fcontent", rs.getString(3));
-				map.put("userid", rs.getInt(4));
-				map.put("photo", rs.getString(5));
-				map.put("time", rs.getString(6));
-				map.put("username", rs.getString(7));
+				
+				map.put("pId", rs.getInt(1));
+				map.put("title", rs.getString(2));
+				map.put("pContent", rs.getString(3));
+				map.put("userId", rs.getInt(4));
+				map.put("time", rs.getString(5));
+				map.put("userName", rs.getString(6));
 				
 				list.add(i, map);
 				

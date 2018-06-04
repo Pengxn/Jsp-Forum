@@ -17,9 +17,9 @@ public class ViaConnect{
 
 	// 插入头像表信息
 	public static void save(int userId, String avatar) {
-
+ 
 		try {
-			
+
 			conn = ConnectDb.getInstance().makeConnection();
 			conn.setAutoCommit(false);
 
@@ -30,19 +30,19 @@ public class ViaConnect{
 			via.setAvatar(avatar);
 
 			viaDao.save(conn, via);
-			
+
 			conn.commit();
-			
+
 		} catch (SQLException e) {
-			
+
 			try {
 				conn.rollback();
 			} catch (Exception e2) {
 				e2.printStackTrace();
 			}
-			
+
 		} finally {
-			
+
 			try {
 				conn.close();
 			} catch (SQLException e) {
@@ -55,7 +55,7 @@ public class ViaConnect{
 	// 查询头像表信息
 	public static Map<Object, Object> query(int userId) {
 
-		Map<Object, Object> map=new HashMap<Object, Object>();
+		Map<Object, Object> map = new HashMap<Object, Object>();
 		
 		try {
 			
@@ -70,7 +70,7 @@ public class ViaConnect{
 			ResultSet rs = viaDao.query(conn, via);
 			
 			while (rs.next()) {
-				map.put("viaId", rs.getInt("userId"));
+				map.put("userId", rs.getInt("userId"));
 				map.put("avatar", rs.getString("avatar"));
 			}
 
