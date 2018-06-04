@@ -10,20 +10,18 @@
 			<!-- post nav -->
 			<div class="col-lg-8 col-md-8">
 			
-			<%
-				for (int i = 0; i < 7; i ++) { // 对 post nav 循环7次
-			%>
 			
 				<!-- POST -->
 				<div class="post">
 					<div class="wrap-ut pull-left">
 						<div class="userinfo pull-left">
 							<div class="avatar">
-								<img src="images/avatar.jpg" alt="" /><!-- avatar -->
-								<div class="status green">&nbsp;</div><!-- status dot -->
+								<img src="images/avatar.jpg" alt="" />	<!-- avatar -->
+								<div class="status green">&nbsp;</div>	<!-- status dot -->
 							</div>
 							<div class="icons">
-								<img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+								<img src="images/icon1.jpg" alt="" /><img src="images/icon2.jpg" alt="" />
+								<img src="images/icon3.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
 							</div>
 						</div>
 						<div class="posttext pull-left">
@@ -55,9 +53,6 @@
 					<div class="clearfix"></div>
 				</div><!-- POST END -->
 				
-				<%
-					}
-			 	%>
 			
 			</div><!-- Post Nav END -->
 			
