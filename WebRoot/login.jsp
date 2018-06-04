@@ -95,12 +95,14 @@
 								</div><!-- acc section END -->
 								
 								<div class="accsection networks">
-								<div class="acccap">
-									<div class="userinfo pull-left">&nbsp;</div>
-									<div class="posttext pull-left">
-										<h3>New a Account</h3>
+									<div class="acccap">
+										<div class="userinfo pull-left">&nbsp;</div>
+										<div class="posttext pull-left">
+											<a href="register.jsp">
+												<h3>New a Account</h3>
+											</a>
+										</div>
 									</div>
-								</div>
 								</div>
 	
 								<div class="postinfobot">
@@ -109,7 +111,9 @@
 									</div>
 									<div class="pull-right postreply">
 										<div class="pull-left smile">
-											<a href="#"><i class="fa fa-smile-o"></i></a>
+											<a href="#">
+												<i class="fa fa-smile-o"></i>
+											</a>
 										</div>
 										<div class="pull-left">
 											<button type="submit" class="btn btn-primary">Login</button>
