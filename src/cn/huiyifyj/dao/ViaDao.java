@@ -8,16 +8,16 @@ import cn.huiyifyj.bean.Via;
 
 public interface ViaDao {
 	
-	//查询头像信息
+	// 查询头像信息
 	public ResultSet query(Connection conn, Via via) throws SQLException;
 	
-	//插入头像信息
+	// 插入和保存头像信息
 	public void save(Connection conn, Via via) throws SQLException;
 	
-	//修改头像信息
+	// 修改头像信息
 	public void update(Connection conn, Via via) throws SQLException;
 	
-	//删除头像信息
+	// 删除头像信息
 	public void delete(Connection conn, Via via) throws SQLException;
 
 }

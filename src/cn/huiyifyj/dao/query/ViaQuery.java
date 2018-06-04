@@ -36,7 +36,7 @@ public class ViaQuery implements ViaDao {
 		PreparedStatement ps = conn.prepareStatement(sql);
 		
 		ps.setInt(1, via.getUserId());
-		ps.setString(2, via.getPhoto());
+		ps.setString(2, via.getAvatar());
 
 		ps.execute();
 	}
@@ -45,20 +45,23 @@ public class ViaQuery implements ViaDao {
 	@Override
 	public void update(Connection conn, Via via) throws SQLException {
 		
+		/* 暂时没有去完善这个功能
 		sql = "update via set photo = ? where userId = ?";
 		
 		PreparedStatement ps=conn.prepareStatement(sql);
 		
-		ps.setString(1, via.getPhoto());
+		ps.setString(1, via.getAvatar());
 		ps.setInt(2, via.getUserId());
 
 		ps.execute();
+		*/
 	}
 
 	// 删除头像信息
 	@Override
 	public void delete(Connection conn, Via via) throws SQLException {
 		// TODO Auto-generated method stub
+		// 暂时没有去完善这个功能
 		
 	}
 
