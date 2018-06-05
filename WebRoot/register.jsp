@@ -65,7 +65,7 @@
 				
 					<!-- Create New Account Nav -->
 					<div class="post">
-						<form action="#" class="form newtopic" method="post">
+						<form action="Register" class="form newtopic" method="post">	<!-- Register Form -->
 							<div class="postinfotop">
 								<h2>Create New Account</h2>
 							</div>
@@ -82,17 +82,17 @@
 								<div class="topwrap">
 									<div class="userinfo pull-left">
 										<div class="avatar">
-											<img src="images/avatar-blank.jpg" alt="" />
+											<img src="images/avatar/avatar-blank.jpg" alt="upload" />
 											<div class="status green">&nbsp;</div>
 										</div>
 										<div class="imgsize">60 x 60</div>
 										<div>
-											<button class="btn">Add</button>
+											<button class="btn">Add</button>	<!-- Upload Avatar image -->
 										</div>
 									</div>
 									<div class="posttext pull-left">
 										<div>
-											<input type="text" placeholder="User Name" class="form-control" />
+											<input type="text" placeholder="User Name" class="form-control" name="name" />
 										</div>
 										<div class="row">
 											<div class="col-lg-6 col-md-6">

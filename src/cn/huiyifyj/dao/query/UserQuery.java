@@ -47,15 +47,15 @@ public class UserQuery implements UserDao {
 	@Override
 	public void save(Connection conn, User user) throws SQLException {
 
-		sql = "insert into user(name, password, email, address, intro) values(?, ?, ?, ?, ?)";
+		sql = "insert into user(name, password) values(?, ?)";
 		
 		PreparedStatement ps=conn.prepareCall(sql);
 		
 		ps.setString(1, user.getName());
 		ps.setString(2, user.getPassword());
-		ps.setString(3, user.getEmail());
-		ps.setString(4, user.getAddress());
-		ps.setString(5, user.getIntro());
+		//ps.setString(3, user.getEmail());
+		//ps.setString(4, user.getAddress());
+		//ps.setString(5, user.getIntro());
 		
 		ps.execute();
 	}

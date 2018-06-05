@@ -65,7 +65,7 @@
 
 						<!-- Login Nav -->
 						<div class="post">
-							<form action="Login" class="form newtopic" method="post">
+							<form action="Login" class="form newtopic" method="post">	<!-- Login Form -->
 								<div class="postinfotop">
 									<h2>Login</h2>
 								</div>
