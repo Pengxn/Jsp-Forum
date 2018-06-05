@@ -71,7 +71,7 @@
 				<c:if test="${empty user}">		<!-- 未登录 -->
 				
 				<div class="env pull-left">
-					<a href="index.jsp#">Login</a>
+					<a href="login.jsp">Login</a>
 				</div>
 				
 				</c:if>

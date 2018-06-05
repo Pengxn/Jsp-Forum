@@ -15,9 +15,7 @@ public class UserConnect {
 
 	static Connection conn = null;
 
-	/**
-	 * 登录时作验证
-	 */
+	// 登录时作验证
 	public static Map<Object, Object> Login(String name) {
 
 		Map<Object, Object> map = new HashMap<Object, Object>();
@@ -34,11 +32,11 @@ public class UserConnect {
 			ResultSet rs = userDao.login(conn, user);
 			while (rs.next()) {
 				
-				map.put("userid", rs.getInt(1));
+				map.put("userId", rs.getInt(1));
 				map.put("name", rs.getString(2));
 				map.put("password", rs.getString(3));
 				map.put("email", rs.getString(4));
-				map.put("family", rs.getString(5));
+				map.put("address", rs.getString(5));
 				map.put("intro", rs.getString(6));
 				map.put("time", rs.getString(7));
 				

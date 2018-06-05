@@ -64,9 +64,7 @@ public class PostConnect {
 		
 	}
 	
-	/**
-	 * 通过 userId 查询发帖表信息
-	 */
+	// 通过 userId 查询发帖表信息
 	public static List<Object> QueryId(int userId) {
 
 		List<Object> list = new ArrayList<Object>();
@@ -85,9 +83,7 @@ public class PostConnect {
 
 			for (int i = 0; rs.next(); i++) {
 				
-				/**
-				 * 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
-				 */
+				// 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
 				Map<Object, Object> map = new HashMap<Object, Object>();
 				
 				map.put("fid", rs.getInt(1));

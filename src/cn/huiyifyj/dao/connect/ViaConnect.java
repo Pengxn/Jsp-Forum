@@ -70,8 +70,8 @@ public class ViaConnect{
 			ResultSet rs = viaDao.query(conn, via);
 			
 			while (rs.next()) {
-				map.put("userId", rs.getInt("userId"));
-				map.put("avatar", rs.getString("avatar"));
+				map.put("userId", rs.getInt(1));
+				map.put("avatar", rs.getString(2));
 			}
 
 			conn.commit();
