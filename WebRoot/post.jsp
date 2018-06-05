@@ -12,10 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Forum :: Topic</title>
-	
+
 	<!-- logo -->
 	<link rel="shortcut icon" href="favicon.png">
-	
+
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -54,15 +54,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 breadcrumbf">
-						<a href="#">Borderlands 2</a>
+						<a href="#">Topic One</a>
 						<span class="diviver">&gt;</span>
-						<a href="#">General Discussion</a>
+						<a href="#">Discussion</a>
 						<span class="diviver">&gt;</span>
 						<a href="#">Topic Details</a>
 					</div>
 				</div>
 			</div><!-- Bread Crumbs Nav END -->
-			
+
 			<div class="container">
 				<div class="row">
 				
@@ -74,11 +74,12 @@
 							<div class="topwrap">
 								<div class="userinfo pull-left">
 									<div class="avatar">
-										<img src="images/avatar.jpg" alt="" />
+										<img src="images/avatar/avatar1.jpg" alt="" />
 										<div class="status green">&nbsp;</div>
 									</div>
 									<div class="icons">
-										<img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" /><img src="images/icon5.jpg" alt="" /><img src="images/icon6.jpg" alt="" />
+										<img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+										<img src="images/icon5.jpg" alt="" /><img src="images/icon6.jpg" alt="" />
 									</div>
 								</div>
 								<div class="posttext pull-left">
@@ -148,17 +149,9 @@
 							</div>
 							<div class="clearfix"></div>
 						</div><!-- Page Number Nav END -->
-						
-						<%
-							for (int i = 0; i < 4; i ++) { // 对 post nav 循环3次
-						%>
-						
+
 						<!-- Comment Nav -->
 						<jsp:include page="comment.jsp"></jsp:include>
-						
-						<%
-							}
-						%>
 						
 						<!-- Type Comment Nav -->
 						<jsp:include page="type.jsp"></jsp:include>

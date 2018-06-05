@@ -18,17 +18,17 @@
 		
 			<!-- post nav -->
 			<div class="col-lg-8 col-md-8">
-				
-				<!--
-					调用 PostConnect.PostQuery() 方法获得所有发帖表信息，将其结果保存到list中
-					调用 ViaConnect.query(int userId) 方法 获得对应的头像信息，将其保存在map中
-				-->
+
 				<%
+					//调用 PostConnect.PostQuery() 方法获得所有发帖表信息，将其结果保存到list中
+					//调用 ViaConnect.query(int userId) 方法 获得对应的头像信息，将其保存在map中
 					List<Object> post = PostConnect.PostQuery();
 					
 					for (int i = 0; i < post.size(); i ++) {
 					
 						Map<Object, Object> m = (Map<Object, Object>) post.get(i);
+						
+						int pId = (Integer) m.get("pId");
 						
 						int userId = (Integer) m.get("userId");
 						
@@ -55,7 +55,7 @@
 						</div>
 						<div class="posttext pull-left">
 							<h2>
-								<a href="post.jsp"><%= title %></a>	<!-- Post Title Nav -->
+								<a href="post/<%= pId %>"><%= title %></a>	<!-- Post Title Nav -->
 							</h2>
 							<p><%= pContent %></p>	<!-- Post Content Nav -->
 						</div>

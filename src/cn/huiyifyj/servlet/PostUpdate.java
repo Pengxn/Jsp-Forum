@@ -135,7 +135,6 @@ public class PostUpdate extends HttpServlet {
 		post.setpId(pId);
 		post.setTitles(titles);
 		post.setpContent(pContent);
-		post.setPhoto(fullFile.getName());
 
 		PostConnect.update(post);
 

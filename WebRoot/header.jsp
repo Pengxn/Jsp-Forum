@@ -12,7 +12,6 @@
 	User user = new User();
 	
 	user = (User) session.getAttribute("loginer");
-	
 %>
 
 <!-- Slider Banner Nav -->

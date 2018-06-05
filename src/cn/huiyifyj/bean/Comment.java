@@ -6,7 +6,7 @@ public class Comment extends IdEntity {
 
 	private int cId; // 评论id
 	private String cContent; // 评论的内容
-	private int byId; // 被评论的人的id
+	private int byId; // 评论所处的帖子的id
 	//注：继承的父类还含有 userId 这里指的是 发表评论的人的ID
 
 	public int getcId() {
