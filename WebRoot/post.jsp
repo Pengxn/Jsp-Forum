@@ -189,8 +189,8 @@
 	
 	</div>
 	
-	<!-- get jQuery from the google apis -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery.js"></script>
 
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
 	<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>

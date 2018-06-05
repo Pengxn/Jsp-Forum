@@ -1,8 +1,22 @@
+<%@page import="cn.huiyifyj.bean.User"%>
+<%@page import="cn.huiyifyj.dao.UserDao"%>
+<%@page import="cn.huiyifyj.dao.query.UserQuery"%>
+<%@page import="cn.huiyifyj.dao.connect.UserConnect"%>
+
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<%
+	User user = new User();
+	
+	user = (User) session.getAttribute("loginer");
 %>
 
 <!DOCTYPE html>
@@ -11,7 +25,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Forum :: New topic</title>
+	<title>New topic</title>
 	
 	<!-- logo -->
 	<link rel="shortcut icon" href="favicon.png">
@@ -54,7 +68,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 breadcrumbf">
-						<a href="#">Borderlands 2</a> <span class="diviver">&gt;</span> <a href="#">General Discussion</a> <span class="diviver">&gt;</span> <a href="#">New Topic</a>
+						<a href="#">Topic One</a> <span class="diviver">&gt;</span> <a href="#">General Discussion</a> <span class="diviver">&gt;</span> <a href="#">New Topic</a>
 					</div>
 				</div>
 			</div><!-- Bread Crumbs Nav END -->
@@ -67,7 +81,7 @@
 					
 					<!-- Type Word Nav -->
 					<div class="post">
-						<form action="#" class="form newtopic" method="post">
+						<form action="PostAdd" class="form newtopic" method="post"> <!-- New Post Form -->
 							<div class="topwrap">
 								<div class="userinfo pull-left">
 									<div class="avatar">
@@ -168,8 +182,8 @@
 	
 	</div>
 	
-	<!-- get jQuery from the google apis -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery.js"></script>
 
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
 	<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
