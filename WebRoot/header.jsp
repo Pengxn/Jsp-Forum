@@ -1,8 +1,19 @@
 <%@page import="cn.huiyifyj.bean.User"%>
+<%@page import="cn.huiyifyj.dao.UserDao"%>
+<%@page import="cn.huiyifyj.dao.query.UserQuery"%>
+<%@page import="cn.huiyifyj.dao.connect.UserConnect"%>
+
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+	Map<Object, Object> user = new HashMap<Object, Object>();
+	
+	user = (Map<Object, Object>) session.getAttribute("loginer");
+	
+%>
 
 <!-- Slider Banner Nav -->
 <div class="tp-banner-container">
@@ -68,14 +79,21 @@
 				</div>
 				
 				<!-- 判断用户是否登陆 -->
-				<c:if test="${empty user}">		<!-- 未登录 -->
+				<% 
+					if (user == null) { //未登录 
+				%>
 				
 				<div class="env pull-left">
 					<a href="login.jsp">Login</a>
 				</div>
 				
-				</c:if>
-				<c:if test="${!empty user}">	<!-- 已登陆 -->
+				<%
+					} else { //已登陆
+	
+						String userName = (String) session.getAttribute("userId");
+	
+						int userId = (Integer) user.get("userId");
+				%>
 				
 				<div class="env pull-left">
 					<i class="fa fa-envelope"></i>
@@ -84,7 +102,7 @@
 				<div class="avatar pull-left dropdown">
 					<a data-toggle="dropdown" href="#">
 
-						<img src="images/avatar.jpg" alt="" >
+						<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= userName %>" >
 
 						<b class="caret"></b>
 					</a>
@@ -94,15 +112,17 @@
 							<a role="menuitem" tabindex="-1" href="#">My Profile</a>
 						</li>
 						<li role="presentation">
-							<a role="menuitem" tabindex="-2" href="#">Unread</a>
+							<a role="menuitem" tabindex="-2" href="#">Unread Info</a>
 						</li>
 						<li role="presentation">
-							<a role="menuitem" tabindex="-3" href="Exit">Log Out</a>	<!-- 调用 servlet.Exit -->
+							<a role="menuitem" tabindex="-3" href="Logout">Log Out</a>	<!-- 调用 servlet.Logoout -->
 						</li>
 					</ul>
 				</div><!-- avatar nav END -->
 				
-				</c:if>
+				<%
+					}
+				%>
 				
 				<div class="clearfix"></div>
 			</div><!-- Right Side Nav -->

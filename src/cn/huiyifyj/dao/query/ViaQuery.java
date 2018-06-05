@@ -31,6 +31,7 @@ public class ViaQuery implements ViaDao {
 	@Override
 	public void save(Connection conn, Via via) throws SQLException {
 		
+		/*
 		sql = "insert into via(userId, photo) values(?, ?)";
 		
 		PreparedStatement ps = conn.prepareStatement(sql);
@@ -39,6 +40,7 @@ public class ViaQuery implements ViaDao {
 		ps.setString(2, via.getAvatar());
 
 		ps.execute();
+		*/
 	}
 
 	// 修改头像信息
