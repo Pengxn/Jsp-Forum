@@ -1,22 +1,58 @@
+<%@page import="cn.huiyifyj.dao.connect.PostConnect"%>
+<%@page import="cn.huiyifyj.dao.connect.ViaConnect"%>
+
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <section class="content">
 
-	<div class="paginationforum"></div><!-- 使header与content保持间距 -->
+	<!-- 使header与content保持间距 -->
+	<div class="paginationforum"></div>
 
 	<div class="container">
 		<div class="row">
 		
 			<!-- post nav -->
 			<div class="col-lg-8 col-md-8">
-			
-			
+				
+				<!--
+					调用 PostConnect.PostQuery() 方法获得所有发帖表信息，将其结果保存到list中
+					调用 ViaConnect.query(int userId) 方法 获得对应的头像信息，将其保存在map中
+				-->
+				<%
+					List<Object> post = PostConnect.PostQuery();
+					
+					for (int i = 0; i < post.size(); i ++) {
+					
+						Map<Object, Object> m = (Map<Object, Object>) post.get(i);
+						
+						int userId = (Integer) m.get("userId");
+						
+						String userName = (String) m.get("userName");
+						
+						String title = (String) m.get("title");
+						
+						String pContent = (String) m.get("pContent");
+						
+						Map<Object, Object> via = ViaConnect.query(userId);
+						
+						String avatar = (String) via.get("avatar");
+				
+				%>
+
 				<!-- POST -->
 				<div class="post">
 					<div class="wrap-ut pull-left">
 						<div class="userinfo pull-left">
 							<div class="avatar">
-								<img src="images/avatar.jpg" alt="" />	<!-- avatar -->
+								<img src="images/avatar/<%= avatar %>.jpg" alt="<%= userName %>" />	<!-- Avatar Nav -->
 								<div class="status green">&nbsp;</div>	<!-- status dot -->
 							</div>
 							<div class="icons">
@@ -26,11 +62,9 @@
 						</div>
 						<div class="posttext pull-left">
 							<h2>
-								<a href="02_topic.html">10 Kids Unaware of Their Halloween Costume</a><!-- Post title -->
+								<a href="Post.jsp"><%= title %></a>	<!-- Post Title Nav -->
 							</h2>
-							<p>
-								It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative.<!-- Post Content Summary -->
-							</p>
+							<p><%= pContent %></p>	<!-- Post Content Nav -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -53,13 +87,16 @@
 					<div class="clearfix"></div>
 				</div><!-- POST END -->
 				
+				<%
+					}
+				%>
 			
 			</div><!-- Post Nav END -->
 			
 			<!-- Right Side Nav -->
 			<div class="col-lg-4 col-md-4">
 			
-				<!-- category nav -->
+				<!-- Category Nav -->
 				<jsp:include page="category.jsp"></jsp:include>
 				
 				<!-- Poll of Week Nav -->
