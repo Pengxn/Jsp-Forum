@@ -9,9 +9,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
-	Map<Object, Object> user = new HashMap<Object, Object>();
+	User user = new User();
 	
-	user = (Map<Object, Object>) session.getAttribute("loginer");
+	user = (User) session.getAttribute("loginer");
 	
 %>
 
@@ -72,17 +72,17 @@
 			
 			<!-- Right Side Nav -->
 			<div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
-				<div class="stnt pull-left">
-					<form action="post.jsp" method="post" class="form">
-						<button class="btn btn-primary">New a Topic</button>
-					</form>
-				</div>
 				
 				<!-- 判断用户是否登陆 -->
 				<% 
 					if (user == null) { //未登录 
 				%>
 				
+				<div class="stnt pull-left">
+					<a href="login.jsp">
+						<button class="btn btn-primary">New a Topic</button>
+					</a>
+				</div>
 				<div class="env pull-left">
 					<a href="login.jsp">Login</a>
 				</div>
@@ -90,11 +90,16 @@
 				<%
 					} else { //已登陆
 	
-						String userName = (String) session.getAttribute("userId");
+						String name = user.getName();
 	
-						int userId = (Integer) user.get("userId");
+						int userId = user.getUserId();
 				%>
 				
+				<div class="stnt pull-left">
+					<a href="new.jsp">
+						<button class="btn btn-primary">New a Topic</button>
+					</a>
+				</div>
 				<div class="env pull-left">
 					<i class="fa fa-envelope"></i>
 				</div>
@@ -102,7 +107,7 @@
 				<div class="avatar pull-left dropdown">
 					<a data-toggle="dropdown" href="#">
 
-						<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= userName %>" >
+						<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= name %>" >
 
 						<b class="caret"></b>
 					</a>
