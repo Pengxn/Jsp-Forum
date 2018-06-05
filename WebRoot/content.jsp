@@ -37,10 +37,6 @@
 						String title = (String) m.get("title");
 						
 						String pContent = (String) m.get("pContent");
-						
-						Map<Object, Object> via = ViaConnect.query(userId);
-						
-						String avatar = (String) via.get("avatar");
 				
 				%>
 
@@ -49,7 +45,7 @@
 					<div class="wrap-ut pull-left">
 						<div class="userinfo pull-left">
 							<div class="avatar">
-								<img src="images/avatar/<%= avatar %>.jpg" alt="<%= userName %>" />	<!-- Avatar Nav -->
+								<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= userName %>" />	<!-- Avatar Nav -->
 								<div class="status green">&nbsp;</div>	<!-- status dot -->
 							</div>
 							<div class="icons">
@@ -59,7 +55,7 @@
 						</div>
 						<div class="posttext pull-left">
 							<h2>
-								<a href="Post.jsp"><%= title %></a>	<!-- Post Title Nav -->
+								<a href="post.jsp"><%= title %></a>	<!-- Post Title Nav -->
 							</h2>
 							<p><%= pContent %></p>	<!-- Post Content Nav -->
 						</div>

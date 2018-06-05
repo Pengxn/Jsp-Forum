@@ -44,11 +44,11 @@ public class PostQuery implements PostDao {
 	@Override
 	public void save(Connection conn, Post post) throws SQLException {
 
-		sql = "insert into post(titles, pContent, userId, userName) values(?, ?, ?, ?)";
+		sql = "insert into post(title, pContent, userId, userName) values(?, ?, ?, ?)";
 		
 		PreparedStatement ps = conn.prepareStatement(sql);
 		
-		ps.setString(1, post.getTitles());
+		ps.setString(1, post.getTitle());
 		ps.setString(2, post.getpContent());
 		ps.setInt(3, post.getUserId());
 		ps.setString(4, post.getUserName());
@@ -60,11 +60,11 @@ public class PostQuery implements PostDao {
 	@Override
 	public void update(Connection conn, Post post) throws SQLException {
 		
-		sql = "update post set titles = ?, pContent = ? where pId = ?";
+		sql = "update post set title = ?, pContent = ? where pId = ?";
 		
 		PreparedStatement ps= conn.prepareCall(sql);
 		
-		ps.setString(1, post.getTitles());
+		ps.setString(1, post.getTitle());
 		ps.setString(2, post.getpContent());
 		ps.setInt(3, post.getpId());
 		

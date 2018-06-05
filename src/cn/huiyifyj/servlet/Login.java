@@ -41,17 +41,17 @@ public class Login extends HttpServlet {
 		String name = req.getParameter("name");
 		String password = req.getParameter("password");
 		
-		Map<Object, Object> users = new HashMap<Object, Object>();
+		Map<Object, Object> map = new HashMap<Object, Object>();
 		
 		// todo: 完善登陆的细节
 		
 		if (null != name && !" ".equals(name)) {
 			
-			users = UserConnect.Login(name);
+			map = UserConnect.Login(name);
 			
 			if (null != password && !" ".equals(password)) {
 				
-				String ps = (String) users.get("password");	// 数据库中对应用户名的密码
+				String ps = (String) map.get("password");	// 数据库中对应用户名的密码
 				
 				if (ps.equals(password)) {
 					
@@ -61,7 +61,7 @@ public class Login extends HttpServlet {
 					
 					user.setName(name);
 					user.setPassword(password);
-					user.setUserId((Integer) users.get("userId"));
+					user.setUserId((Integer) map.get("userId"));
 					
 					session.setAttribute("loginer", user);
 					

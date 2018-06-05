@@ -17,6 +17,10 @@
 	User user = new User();
 	
 	user = (User) session.getAttribute("loginer");
+	
+	String name = user.getName();
+	
+	int userId = user.getUserId();
 %>
 
 <!DOCTYPE html>
@@ -85,7 +89,7 @@
 							<div class="topwrap">
 								<div class="userinfo pull-left">
 									<div class="avatar">
-										<img src="images/avatar4.jpg" alt="" />
+										<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= name %>" >
 										<div class="status red">&nbsp;</div>
 									</div>
 									<div class="icons">
@@ -94,7 +98,7 @@
 								</div>
 								<div class="posttext pull-left">
 									<div>
-										<input type="text" placeholder="Enter Topic Title" class="form-control" />
+										<input type="text" placeholder="Title(at most 50 chars)" class="form-control" name="title" />
 									</div>
 									<div class="row">
 										<div class="col-lg-6 col-md-6">
@@ -106,7 +110,7 @@
 										</div>
 									</div>
 									<div>
-										<textarea name="desc" id="desc" placeholder="Description"  class="form-control" ></textarea>
+										<textarea name="pContent" id="desc" placeholder="Description(at most 300 chars)"  class="form-control" ></textarea>
 									</div>
 									<div class="row newtopcheckbox">
 										<div class="col-lg-6 col-md-6">

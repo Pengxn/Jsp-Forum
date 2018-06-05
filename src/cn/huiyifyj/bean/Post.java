@@ -5,7 +5,7 @@ import cn.huiyifyj.bean.IdEntity;
 public class Post extends IdEntity {
 
 	private int pId; // 帖子ID
-	private String titles; // 帖子标题
+	private String title; // 帖子标题
 	private String pContent; // 发帖内容
 	private String userName; // 发帖人姓名
 
@@ -15,11 +15,11 @@ public class Post extends IdEntity {
 	public void setpId(int pId) {
 		this.pId = pId;
 	}
-	public String getTitles() {
-		return titles;
+	public String getTitle() {
+		return title;
 	}
-	public void setTitles(String titles) {
-		this.titles = titles;
+	public void setTitles(String title) {
+		this.title = title;
 	}
 	public String getpContent() {
 		return pContent;
