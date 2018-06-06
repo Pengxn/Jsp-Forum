@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.huiyifyj.bean.Comment;
+import cn.huiyifyj.bean.Post;
 import cn.huiyifyj.bean.User;
 import cn.huiyifyj.dao.connect.CommentConnect;
 
@@ -21,42 +22,45 @@ public class CommentAdd extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
+
 		req.setCharacterEncoding("UTF-8");
-		
+
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=UTF-8");
 		
-		Comment comment = new Comment();
-		
-		String cContent = req.getParameter("reply");
-		
 		HttpSession session = req.getSession();
-		
+
 		User user = (User) session.getAttribute("loginer");
 		
+		Comment comment = new Comment();
+
+		String cContent = req.getParameter("reply");
+
+
 		int userId = user.getUserId();
 		
-		String userName = user.getName();
+		Post post = new Post();
 		
-		int byId = new Integer(req.getParameter("byid"));
-		
+		post = (Post) req.getAttribute("post");
+
+		int byId = post.getpId();
+
 		comment.setcContent(cContent);
 		comment.setById(byId);
 		comment.setUserId(userId);
 
 		CommentConnect.save(comment);
-		
+			
 		resp.sendRedirect("post/" + byId);
-		
+
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
+
 		doGet(req, resp);
-		
+
 	}
 	
 }

@@ -55,7 +55,9 @@
 						</div>
 						<div class="posttext pull-left">
 							<h2>
-								<a href="post/<%= pId %>"><%= title %></a>	<!-- Post Title Nav -->
+								<a href="post/<%= pId %>">
+									<%= title %>	<!-- Post Title Nav -->
+								</a>
 							</h2>
 							<p><%= pContent %></p>	<!-- Post Content Nav -->
 						</div>
@@ -79,11 +81,11 @@
 					</div>
 					<div class="clearfix"></div>
 				</div><!-- POST END -->
-				
+
 				<%
 					}
 				%>
-			
+
 			</div><!-- Post Nav END -->
 			
 			<!-- Right Side Nav -->

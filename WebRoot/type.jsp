@@ -2,11 +2,19 @@
 <%@page import="cn.huiyifyj.dao.UserDao"%>
 <%@page import="cn.huiyifyj.dao.query.UserQuery"%>
 <%@page import="cn.huiyifyj.dao.connect.UserConnect"%>
+<%@page import="cn.huiyifyj.util.Tool"%>
 
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	
+	req.setAttribute("post", post);
+%>
 
 <%
 	User user = new User();
@@ -63,7 +71,7 @@
 						if (user == null) { // 未登录 
 					%>
 					<a href="login.jsp">
-						<button class="btn btn-primary">Post Reply</button>
+						<button type="button" class="btn btn-primary">Post Reply</button>
 					</a>
 					<%
 						} else {

@@ -1,4 +1,6 @@
+<%@page import="cn.huiyifyj.util.Tool"%>
 <%@page import="cn.huiyifyj.bean.Post"%>
+<%@page import="cn.huiyifyj.dao.connect.PostConnect"%>
 <%@page import="cn.huiyifyj.bean.Comment"%>
 
 <%@page import="java.util.Map"%>
@@ -12,13 +14,11 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+
 <%
 	Post post = new Post();
 	
-	List<Object> commentList = new ArrayList<Object>();
-	
-	post = (Post) session.getAttribute("post");
-	commentList = (List<Object>) session.getAttribute("commentList");
+	post = (Post) request.getAttribute("post");
 	
 	String title = post.getTitle();
 	String userName = post.getUserName();
@@ -32,7 +32,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title><%= title %></title>
+	<base href="<%= basePath %>">
+	
+	<title>Topic</title>
 
 	<!-- logo -->
 	<link rel="shortcut icon" href="favicon.png">

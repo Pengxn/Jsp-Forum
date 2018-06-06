@@ -31,13 +31,13 @@ public class CommentQuery implements CommentDao {
 	@Override
 	public void save(Connection conn, Comment comment) throws SQLException {
 		
-		sql = "insert into comment(cContent, userId, byId) values(?, ?, ?)";
+		sql = "insert into comment(cContent, byId, userId) values(?, ?, ?)";
 		
 		PreparedStatement ps=conn.prepareCall(sql);
 		
 		ps.setString(1, comment.getcContent());
-		ps.setInt(2, comment.getUserId());
 		ps.setInt(3, comment.getById());
+		ps.setInt(2, comment.getUserId());
 		
 		ps.execute();
 	}
