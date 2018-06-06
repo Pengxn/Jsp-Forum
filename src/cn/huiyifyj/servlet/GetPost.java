@@ -18,18 +18,11 @@ public class GetPost extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	// url 为 /post/* 调用的是 doGet() 方法
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
-		super.doPost(req, resp);
-		
-	}
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		
 		int pId = Integer.parseInt(Tool.getUrlId(req));
 		
 		Post post = new Post();
@@ -49,6 +42,14 @@ public class GetPost extends HttpServlet {
 		RequestDispatcher rd;
 		rd = req.getRequestDispatcher("/post.jsp");
 		rd.forward(req, resp);
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		doGet(req, resp);
 		
 	}
 
