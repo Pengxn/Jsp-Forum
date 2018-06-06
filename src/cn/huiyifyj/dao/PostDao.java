@@ -11,6 +11,9 @@ public interface PostDao {
 	// 查询用户信息
 	public ResultSet query(Connection conn, Post post) throws SQLException;
 	
+	// 通过 pId 查询该帖子信息
+	public ResultSet getPost(Connection conn, Post post) throws SQLException;
+	
 	// 通过 userid 查询用户信息
 	public ResultSet queryId(Connection conn, Post post) throws SQLException;
 	

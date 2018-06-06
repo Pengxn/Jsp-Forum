@@ -32,7 +32,7 @@ public class PostConnect {
 
 			ResultSet rs = postDao.query(conn, post);
 
-			for (int i = 0; rs.next(); i++) {
+			for (int i = 0; rs.next(); i ++) {
 				
 				// 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
 				Map<Object, Object> map = new HashMap<Object, Object>();
@@ -61,6 +61,48 @@ public class PostConnect {
 		}
 		
 		return list;
+		
+	}
+	
+	public static Post getPost(int pId) {
+		
+		Post post = new Post();
+
+		try {
+			
+			conn = ConnectDb.getInstance().makeConnection();
+			conn.setAutoCommit(false);
+			
+			PostDao postDao = new PostQuery();
+
+			post.setpId(pId);
+			
+			ResultSet rs = postDao.getPost(conn, post);
+
+			String title = rs.getString("title");
+			String pContent = rs.getString("pContent");
+			int userId = rs.getInt("userId");
+			String userName = rs.getString("userName");
+				
+			//post.setpId(pId);
+			post.setTitles(title);
+			post.setpContent(pContent);
+			post.setUserId(userId);
+			post.setUserName(userName);
+			
+			conn.commit();
+			
+		} catch (SQLException e) {
+			
+			try {
+				conn.rollback();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		}
+
+		return post;
 		
 	}
 	
@@ -113,9 +155,7 @@ public class PostConnect {
 		
 	}
 	
-	/**
-	 * 向发帖表添加信息
-	 */
+	// 向发帖表添加信息
 	public static void save(Post post) {
 		
 		try {
@@ -186,9 +226,7 @@ public class PostConnect {
 	}
 	
 	
-	/**
-	 * 通过 pId 删除发帖表信息
-	 */
+	// 通过 pId 删除发帖表信息
 	public static void delete(int pId) {
 		
 		try {

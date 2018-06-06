@@ -24,6 +24,20 @@ public class PostQuery implements PostDao {
 		
 		return rs;
 	}
+	
+	// 通过 pId 查询该帖子信息
+	public ResultSet getPost(Connection conn, Post post) throws SQLException{
+
+		sql = "select * from post where pId = ?";
+
+		PreparedStatement ps = conn.prepareCall(sql);
+
+		ps.setInt(1, post.getpId());
+
+		ResultSet rs = ps.executeQuery();
+
+		return rs;
+	}
 
 	// 通过 userId 查询发帖信息
 	@Override
