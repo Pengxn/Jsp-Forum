@@ -1,8 +1,29 @@
+<%@page import="cn.huiyifyj.bean.Post"%>
+<%@page import="cn.huiyifyj.bean.Comment"%>
+
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%
+	Post post = new Post();
+	
+	List<Object> commentList = new ArrayList<Object>();
+	
+	post = (Post) session.getAttribute("post");
+	commentList = (List<Object>) session.getAttribute("commentList");
+	
+	String title = post.getTitle();
+	String userName = post.getUserName();
+	int userId = post.getUserId();
+	String pContent = post.getpContent();
 %>
 
 <!DOCTYPE html>
@@ -11,7 +32,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Forum :: Topic</title>
+	<title><%= title %></title>
 
 	<!-- logo -->
 	<link rel="shortcut icon" href="favicon.png">
@@ -74,7 +95,7 @@
 							<div class="topwrap">
 								<div class="userinfo pull-left">
 									<div class="avatar">
-										<img src="images/avatar/avatar1.jpg" alt="" />
+										<img src="images/avatar/avatar<%= userId %>.jpg" alt="<%= userName %>" />
 										<div class="status green">&nbsp;</div>
 									</div>
 									<div class="icons">
@@ -83,8 +104,12 @@
 									</div>
 								</div>
 								<div class="posttext pull-left">
-									<h2>10 Kids Unaware of Their Halloween Costume</h2>
-									<p>Today, we're looking at three particularly interesting stories. Pinterest added a new location-based feature on Wednesday that uses Place Pins as a way to map out vacations and favorite areas. Southwest Airlines is providing Wi-Fi access from gate to gate for $8 per day through an onboard hotspot. And in an effort to ramp up its user base, Google Wallet is offering a debit card that can take out cash from.</p>
+									<h2>
+										<%= title %>
+									</h2>
+									<p>
+										<%= pContent %>
+									</p>
 								</div>
 								<div class="clearfix"></div>
 							</div>

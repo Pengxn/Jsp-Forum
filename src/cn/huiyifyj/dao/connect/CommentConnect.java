@@ -55,7 +55,7 @@ public class CommentConnect {
 	/**
 	 * 获得评论表信息
 	 */
-	public static List<Object> PinglunQuery(int byId) {
+	public static List<Object> commentQuery(int byId) {
 
 		List<Object> list = new ArrayList<Object>();
 		

@@ -4,17 +4,20 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-  <display-name>forum</display-name>	
+  <display-name>forum</display-name>
+
+  <!-- Welcome Page -->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>Post</servlet-name>
-    <servlet-class>cn.huiyifyj.servlet.Post</servlet-class>
-  </servlet>
 
+  <!-- 所有 post/* 都向cn.huiyifyj.servlet.GetPost调用请求 -->
+  <servlet>
+    <servlet-name>post</servlet-name>
+    <servlet-class>cn.huiyifyj.servlet.GetPost</servlet-class>
+  </servlet>
   <servlet-mapping>
-    <servlet-name>Post</servlet-name>
+    <servlet-name>post</servlet-name>
     <url-pattern>/post/*</url-pattern>
   </servlet-mapping>
 </web-app>

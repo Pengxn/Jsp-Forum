@@ -7,8 +7,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cn.huiyifyj.bean.Comment;
+import cn.huiyifyj.bean.User;
 import cn.huiyifyj.dao.connect.CommentConnect;
 
 @WebServlet("/CommentAdd")
@@ -27,15 +29,25 @@ public class CommentAdd extends HttpServlet {
 		
 		Comment comment = new Comment();
 		
-		comment.setcContent(req.getParameter("pinglun_m"));
-		comment.setUserId(new Integer(req.getParameter("userid")));
-		comment.setById(new Integer(req.getParameter("byid")));
+		String cContent = req.getParameter("reply");
 		
-		System.out.println("评论增加成功");
+		HttpSession session = req.getSession();
 		
+		User user = (User) session.getAttribute("loginer");
+		
+		int userId = user.getUserId();
+		
+		String userName = user.getName();
+		
+		int byId = new Integer(req.getParameter("byid"));
+		
+		comment.setcContent(cContent);
+		comment.setById(byId);
+		comment.setUserId(userId);
+
 		CommentConnect.save(comment);
 		
-		resp.sendRedirect("index.jsp");
+		resp.sendRedirect("post/" + byId);
 		
 	}
 
