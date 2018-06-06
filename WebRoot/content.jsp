@@ -1,4 +1,5 @@
 <%@page import="cn.huiyifyj.dao.connect.PostConnect"%>
+<%@page import="cn.huiyifyj.dao.connect.CommentConnect"%>
 <%@page import="cn.huiyifyj.dao.connect.ViaConnect"%>
 
 <%@page import="java.util.List"%>
@@ -37,6 +38,12 @@
 						String title = (String) m.get("title");
 						
 						String pContent = (String) m.get("pContent");
+						
+						//下面是 post 评论留言数的实现
+						int byId = pId;
+						List<Object> commentList = new ArrayList<Object>();
+						commentList = CommentConnect.commentQuery(byId);
+						int commentNum = commentList.size();
 				
 				%>
 
@@ -66,13 +73,13 @@
 					<div class="postinfo pull-left">
 						<div class="comments">
 							<div class="commentbg">
-								560	<!-- Comment Number -->
+								<%= commentNum %>	<!-- Comment Number -->
 								<div class="mark"></div>
 							</div>
 						</div>
 						<div class="views">
 							<i class="fa fa-eye"></i>
-							1,568 <!-- Viewed Number -->
+							<%= viewNum %> <!-- Viewed Number -->
 						</div>
 						<div class="time">
 							<i class="fa fa-clock-o"></i>
