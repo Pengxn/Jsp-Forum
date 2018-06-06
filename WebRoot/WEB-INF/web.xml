@@ -4,8 +4,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-  <display-name></display-name>	
+  <display-name>forum</display-name>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>Post</servlet-name>
+    <servlet-class>cn.huiyifyj.servlet.Post</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Post</servlet-name>
+    <url-pattern>/post/*</url-pattern>
+  </servlet-mapping>
 </web-app>
