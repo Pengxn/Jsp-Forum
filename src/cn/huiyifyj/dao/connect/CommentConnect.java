@@ -77,11 +77,11 @@ public class CommentConnect {
 				 * 要想向list插入不同HashMap的值，必须要将HashMap new在for循环内，因为存入list的是HashMap的地址，不是值。。
 				 */
 				Map<Object, Object> map = new HashMap<Object, Object>();
-				map.put("pid", rs.getInt(1));
-				map.put("pcontent", rs.getString(2));
-				map.put("userid", rs.getInt(3));
-				map.put("byid", rs.getInt(4));
-				map.put("time", rs.getString(5));
+				map.put("cId", rs.getInt("cId"));
+				map.put("cContent", rs.getString("cContent"));
+				map.put("byId", rs.getInt("byId"));
+				map.put("userId", rs.getInt("userId"));
+				map.put("time", rs.getString("time"));
 				
 				list.add(i, map);
 				

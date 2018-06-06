@@ -1,15 +1,52 @@
+<%@page import="cn.huiyifyj.util.Tool"%>
+<%@page import="cn.huiyifyj.bean.Post"%>
+<%@page import="cn.huiyifyj.dao.connect.PostConnect"%>
+<%@page import="cn.huiyifyj.bean.Comment"%>
+
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<%
+	List<Object> commentList = new ArrayList<Object>();
+
+	commentList = (List<Object>) request.getAttribute("comment");
+	
+	if (commentList == null || commentList.size() == 0) {
+%>
+<!-- Black Page -->
+<%
+	} else {
+	
+		for (int i = 0; i < commentList.size(); i ++) {
+						
+			Map<Object, Object> m = (Map<Object, Object>) commentList.get(i);
+							
+			int userId = (Integer) m.get("userId");
+							
+			String cContent = (String) m.get("cContent");
+%>
 
 <div class="post">
 	<div class="topwrap">
 		<div class="userinfo pull-left">
 			<div class="avatar">
-				<img src="images/avatar/avatar2.jpg" alt="" />
+				<img src="images/avatar/avatar<%= userId %>.jpg" alt="" />
 				<div class="status red">&nbsp;</div>
 			</div>
 		</div>
 		<div class="posttext pull-left">
-			<p>Typography helps you engage your audience and establish a distinct, unique personality on your website. Knowing how to use fonts to build character in your design is a powerful skill, and exploring the history and use of typefaces, as well as typogra...</p>
+			<p>
+				<%= cContent %>
+			</p>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -41,3 +78,8 @@
 		<div class="clearfix"></div>
 	</div>
 </div><!-- Comment Nav END -->
+
+<%
+		}
+	}
+%>

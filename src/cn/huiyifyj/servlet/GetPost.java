@@ -18,7 +18,7 @@ public class GetPost extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	// url 为 /post/* 调用的是 doGet() 方法
+	// url /post/* 调用的是 doGet() 方法
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
