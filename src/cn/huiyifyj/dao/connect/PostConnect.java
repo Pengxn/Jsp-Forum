@@ -9,8 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 import cn.huiyifyj.dao.PostDao;
+import cn.huiyifyj.dao.UserDao;
 import cn.huiyifyj.dao.query.PostQuery;
+import cn.huiyifyj.dao.query.UserQuery;
 import cn.huiyifyj.bean.Post;
+import cn.huiyifyj.bean.User;
 import cn.huiyifyj.util.ConnectDb;
 
 public class PostConnect {
@@ -64,9 +67,9 @@ public class PostConnect {
 		
 	}
 	
-	public static Post getPost(int pId) {
+	public static Map<Object, Object> getPost(int pId) {
 		
-		Post post = new Post();
+		Map<Object, Object> map = new HashMap<Object, Object>();
 
 		try {
 			
@@ -74,21 +77,22 @@ public class PostConnect {
 			conn.setAutoCommit(false);
 			
 			PostDao postDao = new PostQuery();
-
+			Post post = new Post();
+			
 			post.setpId(pId);
 			
 			ResultSet rs = postDao.getPost(conn, post);
-
-			String title = rs.getString("title");
-			String pContent = rs.getString("pContent");
-			int userId = rs.getInt("userId");
-			String userName = rs.getString("userName");
+			
+			while (rs.next()) {
 				
-			//post.setpId(pId);
-			post.setTitles(title);
-			post.setpContent(pContent);
-			post.setUserId(userId);
-			post.setUserName(userName);
+				map.put("pId", rs.getInt("pId"));
+				map.put("title", rs.getString("title"));
+				map.put("pContent", rs.getString("pContent"));
+				map.put("userId", rs.getInt("userId"));
+				map.put("userName", rs.getString("userName"));
+				//System.out.println(rs.next());
+
+			}
 			
 			conn.commit();
 			
@@ -102,7 +106,7 @@ public class PostConnect {
 			
 		}
 
-		return post;
+		return map;
 		
 	}
 	

@@ -13,6 +13,7 @@ import cn.huiyifyj.bean.Comment;
 import cn.huiyifyj.bean.Post;
 import cn.huiyifyj.bean.User;
 import cn.huiyifyj.dao.connect.CommentConnect;
+import cn.huiyifyj.util.Tool;
 
 @WebServlet("/CommentAdd")
 public class CommentAdd extends HttpServlet {
@@ -36,14 +37,17 @@ public class CommentAdd extends HttpServlet {
 
 		String cContent = req.getParameter("reply");
 
-
 		int userId = user.getUserId();
 		
+		/*
 		Post post = new Post();
 		
-		post = (Post) req.getAttribute("post");
+		post = (Post) req.getAttribute("npost");
 
 		int byId = post.getpId();
+		*/
+		
+		int byId = (Integer) session.getAttribute("lastcommentbyId");
 
 		comment.setcContent(cContent);
 		comment.setById(byId);

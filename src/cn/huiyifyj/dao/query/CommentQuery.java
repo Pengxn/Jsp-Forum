@@ -36,8 +36,8 @@ public class CommentQuery implements CommentDao {
 		PreparedStatement ps=conn.prepareCall(sql);
 		
 		ps.setString(1, comment.getcContent());
-		ps.setInt(3, comment.getById());
-		ps.setInt(2, comment.getUserId());
+		ps.setInt(2, comment.getById());
+		ps.setInt(3, comment.getUserId());
 		
 		ps.execute();
 	}

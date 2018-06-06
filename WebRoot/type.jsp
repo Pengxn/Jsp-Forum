@@ -1,4 +1,5 @@
 <%@page import="cn.huiyifyj.bean.User"%>
+<%@page import="cn.huiyifyj.bean.Post"%>
 <%@page import="cn.huiyifyj.dao.UserDao"%>
 <%@page import="cn.huiyifyj.dao.query.UserQuery"%>
 <%@page import="cn.huiyifyj.dao.connect.UserConnect"%>
@@ -12,11 +13,17 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-	
-	req.setAttribute("post", post);
 %>
 
 <%
+	Post post = new Post();
+	
+	post = (Post) request.getAttribute("post");
+	
+	int byId = post.getpId();
+	
+	session.setAttribute("lastcommentbyId", byId);
+
 	User user = new User();
 	
 	user = (User) session.getAttribute("loginer");

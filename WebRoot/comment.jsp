@@ -11,11 +11,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<%
 	List<Object> commentList = new ArrayList<Object>();
 
 	commentList = (List<Object>) request.getAttribute("comment");
@@ -28,11 +23,11 @@
 	
 		for (int i = 0; i < commentList.size(); i ++) {
 						
-			Map<Object, Object> m = (Map<Object, Object>) commentList.get(i);
+			Map<Object, Object> cm = (Map<Object, Object>) commentList.get(i);
 							
-			int userId = (Integer) m.get("userId");
+			int userId = (Integer) cm.get("userId");
 							
-			String cContent = (String) m.get("cContent");
+			String cContent = (String) cm.get("cContent");
 %>
 
 <div class="post">

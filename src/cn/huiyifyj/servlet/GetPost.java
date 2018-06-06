@@ -1,6 +1,9 @@
 package cn.huiyifyj.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -27,15 +30,25 @@ public class GetPost extends HttpServlet {
 		
 		Post post = new Post();
 		
-		post = PostConnect.getPost(pId);
+		Map<Object, Object> m = new HashMap<Object, Object>();
+		
+		m = PostConnect.getPost(pId);
+		
+		post.setTitles((String) m.get("title"));
+		post.setpContent((String) m.get("pContent"));
+		post.setpId((Integer) m.get("pId"));
+		post.setUserId((Integer) m.get("userId"));
+		post.setUserName((String) m.get("userName"));
 
 		// 这是你点击的单个 Post 页面
 		req.setAttribute("post", post);
 		
 		int byId = pId;
 		
+		List<Object> commentList = new ArrayList<Object>();
+		
 		// 这是该页面下的 CommentList
-		List<Object> commentList = CommentConnect.commentQuery(byId);
+		commentList = CommentConnect.commentQuery(byId);
 		
 		req.setAttribute("comment", commentList);
 		

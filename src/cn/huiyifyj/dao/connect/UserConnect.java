@@ -118,9 +118,11 @@ public class UserConnect {
 
 			UserDao userDao = new UserQuery();
 			User user = new User();
+			
 			user.setUserId(userId);
 
 			ResultSet rs = userDao.query(conn, user);
+			
 			while (rs.next()) {
 				
 				map.put("userid", rs.getInt(1));
