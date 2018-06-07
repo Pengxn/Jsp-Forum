@@ -26,6 +26,19 @@
 	String pContent = post.getpContent();
 %>
 
+<%
+	// 这里的 viewNum 值会传给 content.jsp
+	int pId = post.getpId();
+	Integer viewNum = (Integer) application.getAttribute("postViewNum"+ pId);
+	if (viewNum == null) {
+		int ViewNum = 1;
+		application.setAttribute("postViewNum" + pId, ViewNum);
+	} else {
+		viewNum += 1;
+		application.setAttribute("postViewNum" + pId, viewNum);
+	}
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

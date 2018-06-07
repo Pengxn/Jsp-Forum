@@ -44,6 +44,15 @@
 						List<Object> commentList = new ArrayList<Object>();
 						commentList = CommentConnect.commentQuery(byId);
 						int commentNum = commentList.size();
+						
+						// 这是 post 被访问量的统计, 在 post.jsp 设置了相应方法
+						int viewNum;
+						Integer viewCount = (Integer) application.getAttribute("postViewNum" + pId);
+						if (viewCount == null) {
+							viewNum = 0;
+						} else {
+							viewNum = viewCount;
+						}
 				
 				%>
 
