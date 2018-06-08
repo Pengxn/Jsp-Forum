@@ -2,7 +2,7 @@
 
 # Forum
 
-<a href="https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE"><img src="https://imgshields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square" alt="license"></a>
+<a href="https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE"><img src="https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square" alt="license"></a>
 <a href="https://github.com/huiyifyj/Jsp-Forum/releases"><img src="https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square" alt="version"></a>
 <a href="https://www.paypal.me/fengyijie"><img alt="PayPal" src="https://img.shields.io/badge/PayPal-Tip me-green.svg?style=flat-square&logo=paypal"></a>
 
