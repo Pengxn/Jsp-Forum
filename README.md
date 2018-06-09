@@ -2,9 +2,8 @@
 
 # Forum
 
-<a href="https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE"><img src="https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square" alt="license"></a>
-<a href="https://github.com/huiyifyj/Jsp-Forum/releases"><img src="https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square" alt="version"></a>
-<a href="https://www.paypal.me/fengyijie"><img alt="PayPal" src="https://img.shields.io/badge/PayPal-Tip me-green.svg?style=flat-square&logo=paypal"></a>
+[![license](https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
+[![version](https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/releases)
 
 This is a forum website base on jsp.<br>
 <br>
