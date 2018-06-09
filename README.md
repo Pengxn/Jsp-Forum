@@ -5,6 +5,7 @@
 [![license](https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
 [![version](https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/releases)
 
+This is originally my sophomore curriculum design work.<br>
 This is a forum website base on jsp.<br>
 <br>
 **Usage**:
@@ -12,18 +13,18 @@ This is a forum website base on jsp.<br>
   `$ git clone https://github.com/huiyifyj/Jsp-Forum.git`
 - Deploy on Tomcat.
 - Import Sql file.
-- Open youe browser:<br>
+- Open your browser:<br>
   `http://127.0.0.1:8080/forum`
 <br>
 <br>
 
-> Note:
-```
-This project is developing.
-Many functions have not been realized.
-Even some confusing bugs.
-```
-
+> Note:<br>
+>
+> *This project is developing.*<br>
+> *Many functions have not been realized.*<br>
+> *Even some confusing bugs.*<br>
+>
+>
 > LICENSE: [MIT](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
 
 <br>
