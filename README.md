@@ -3,7 +3,7 @@
 # Forum
 
 [![license](https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
-[![version](https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/releases)
+[![version](https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/releases/latest)
 
 This is originally my sophomore curriculum design work.<br>
 This is a forum website base on jsp.<br>
