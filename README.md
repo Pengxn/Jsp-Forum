@@ -1,4 +1,4 @@
-<img src="https://github.com/huiyifyj/Jsp-Forum/blob/master/WebRoot/favicon.png" alt="Proxy-pac.js" alt="logo" width="144" height="144" align="right" />
+<img src="https://github.com/huiyifyj/Jsp-Forum/blob/master/WebRoot/favicon.png" alt="Jsp-Forum" alt="logo" width="144" height="144" align="right" />
 
 # Forum
 
