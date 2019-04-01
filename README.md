@@ -1,16 +1,16 @@
-<img src="https://github.com/huiyifyj/Jsp-Forum/blob/master/WebRoot/favicon.png" alt="Jsp-Forum" alt="logo" width="144" height="144" align="right" />
+<img src="https://github.com/Pengxn/Jsp-Forum/blob/master/WebRoot/favicon.png" alt="Jsp-Forum" alt="logo" width="144" height="144" align="right" />
 
 # Forum
 
-[![license](https://img.shields.io/github/license/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
-[![version](https://img.shields.io/github/release/huiyifyj/Jsp-Forum.svg?style=flat-square)](https://github.com/huiyifyj/Jsp-Forum/releases/latest)
+[![license](https://img.shields.io/github/license/Pengxn/Jsp-Forum.svg?style=flat-square)](https://github.com/Pengxn/Jsp-Forum/blob/master/LICENSE)
+[![version](https://img.shields.io/github/release/Pengxn/Jsp-Forum.svg?style=flat-square)](https://github.com/Pengxn/Jsp-Forum/releases/latest)
 
 This is originally my sophomore curriculum design work.<br>
 This is a forum website base on jsp.<br>
 <br>
 **Usage**:
 - Git clone:<br>
-  `$ git clone https://github.com/huiyifyj/Jsp-Forum.git`
+  `$ git clone https://github.com/Pengxn/Jsp-Forum.git`
 - Deploy on Tomcat.
 - Import Sql file.
 - Open your browser:<br>
@@ -25,11 +25,11 @@ This is a forum website base on jsp.<br>
 > *Even some confusing bugs.*<br>
 >
 >
-> LICENSE: [MIT](https://github.com/huiyifyj/Jsp-Forum/blob/master/LICENSE)
+> LICENSE: [MIT](https://github.com/Pengxn/Jsp-Forum/blob/master/LICENSE)
 
 <br>
 <br>
 <br>
 <div align=center>
-	&copy; 2018 &nbsp; | &nbsp; <a href="https://huiyifyj.github.io">Huiyi.FYJ</a>
+	&copy; 2018 &nbsp; | &nbsp; <a href="https://Pengxn.github.io">Huiyi.FYJ</a>
 </div>
